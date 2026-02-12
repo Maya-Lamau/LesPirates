@@ -11,7 +11,7 @@ public class Pirate {
 		this.caseActuelle = caseActuelle;
 	}
 
-	public void deplacement() {
+	public int deplacement() {
 		Des des = new Des();
 		int valeur = des.lancerDes();
 		System.out.println(valeur);
@@ -23,8 +23,10 @@ public class Pirate {
 			difference = caseActuelle - 30;
 			caseActuelle = 30 - difference;
 		}
+		return valeur;
 
 	}
+	
 	
 	public void parler() {
 		System.out.println(caseActuelle);
@@ -32,6 +34,10 @@ public class Pirate {
 	
 	public int getCaseActuelle() {
 		return caseActuelle;
+	}
+	
+	public String getNom() {
+		return nom;
 	}
 
 }
