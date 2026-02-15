@@ -12,25 +12,21 @@ public class Pirate {
 	}
 
 	public int deplacement() {
+		Plateau plateau = new Plateau();
 		Des des = new Des();
 		int valeur = des.lancerDes();
-		System.out.println(valeur);
-		
+				
 		caseActuelle = caseActuelle + valeur;
 		
-		if ((caseActuelle) > 30) {
+		if ((caseActuelle) > plateau.getNbCase()) {
 			int difference;
-			difference = caseActuelle - 30;
-			caseActuelle = 30 - difference;
+			difference = caseActuelle - plateau.getNbCase();
+			caseActuelle = plateau.getNbCase() - difference;
 		}
 		return valeur;
 
 	}
 	
-	
-	public void parler() {
-		System.out.println(caseActuelle);
-	}
 	
 	public int getCaseActuelle() {
 		return caseActuelle;
