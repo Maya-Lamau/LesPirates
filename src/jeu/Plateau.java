@@ -1,15 +1,14 @@
 package jeu;
 
 public class Plateau {
-	private Case[] cases;
+	private Case[] casesSpeciale;
 	private int nbCasesMax = 30;
 
 	public Plateau() {
-		cases = new Case[nbCasesMax];
+		//TODO je dois faire un tableau de mes cases spé
+		
 
-		for (int i = 0; i < nbCasesMax; i++) {
-			cases[i] = new Case(i + 1);
-		}
+		
 
 	}
 
