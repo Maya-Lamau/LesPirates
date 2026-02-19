@@ -1,37 +1,34 @@
 package jeu;
 
 public class Pirate {
-	private int caseActuelle = 1;
 	private String nom;
+	private int vie = 5;
 	private Couleur couleur;
+	private int caseActuelle;
 
-	public Pirate(String nom, Couleur couleur, int caseActuelle) {
+	public Pirate(String nom, Couleur couleur, int caseActuelle, int vie) {
 		this.nom = nom;
 		this.couleur = couleur;
+		this.vie = vie;
 		this.caseActuelle = caseActuelle;
 	}
 
 	public int deplacement() {
 		Plateau plateau = new Plateau();
+
 		Des des = new Des();
 		int valeur = des.lancerDes();
-				
-		caseActuelle = caseActuelle + valeur;
+
+		caseActuelle = plateau.mouvement(valeur, caseActuelle);
 		
-		if ((caseActuelle) > plateau.getNbCase()) {
-			int difference;
-			difference = caseActuelle - plateau.getNbCase();
-			caseActuelle = plateau.getNbCase() - difference;
-		}
 		return valeur;
 
 	}
-	
-	
+
 	public int getCaseActuelle() {
 		return caseActuelle;
 	}
-	
+
 	public String getNom() {
 		return nom;
 	}
