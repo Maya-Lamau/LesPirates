@@ -15,14 +15,10 @@ public class Pirate {
 
 	public int deplacement() {
 		Plateau plateau = new Plateau();
-
 		Des des = new Des();
 		int valeur = des.lancerDes();
-
 		caseActuelle = plateau.mouvement(valeur, caseActuelle);
-		
 		return valeur;
-
 	}
 
 	public int getCaseActuelle() {

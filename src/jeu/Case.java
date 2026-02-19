@@ -11,7 +11,5 @@ public class Case {
 		return numeroCase;
 	}
 	
-	public void actionSpeciale(Pirate pirate) {
-		
-	}
+
 }
