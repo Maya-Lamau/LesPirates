@@ -24,6 +24,17 @@ public class Pirate {
 	public int getCaseActuelle() {
 		return caseActuelle;
 	}
+	
+	public int perdreVie(Armes armes) {
+		if (armes == Armes.CANNON) {
+			vie = vie - 3;
+		}else if(armes==Armes.FUSIL) {
+			vie = vie - 2;
+		}else if(armes == Armes.EPEE) {
+			vie = vie - 1;
+		}
+		return vie;
+	}
 
 	public String getNom() {
 		return nom;
