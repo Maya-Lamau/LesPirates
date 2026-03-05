@@ -2,16 +2,24 @@ package jeu;
 
 public abstract class CasesSpeciales {
 	private int numeroCase;
+	private String typeCase;
+	private Armes arme;
 
-	public CasesSpeciales(int numeroCase) {
+	protected CasesSpeciales(int numeroCase, Armes arme) {
 		this.numeroCase = numeroCase;
+		this.arme = arme;
 	}
+	
 
 	public int getNumeroCase() {
 		return numeroCase;
 	}
 	
-	public abstract int effet(int caseActuelle, Pirate pirateSurCase, Pirate autrePirate, Armes arme);
+	public Armes getArme() {
+		return arme;
+	}
+	
+	public abstract void effet(Pirate pirateSurCase, Pirate autrePirate, Armes arme);
 	
 
 }

@@ -25,7 +25,7 @@ public class Pirate {
 		return caseActuelle;
 	}
 	
-	public int perdreVie(Armes armes) {
+	public void perdreVie(Armes armes) {
 		if (armes == Armes.CANNON) {
 			vie = vie - 3;
 		}else if(armes==Armes.FUSIL) {
@@ -33,7 +33,6 @@ public class Pirate {
 		}else if(armes == Armes.EPEE) {
 			vie = vie - 1;
 		}
-		return vie;
 	}
 
 	public String getNom() {

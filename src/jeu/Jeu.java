@@ -14,20 +14,20 @@ public class Jeu {
 		Pirate bill = new Pirate("Bill", Couleur.ROSE, 1, 5);
 		affichage.affichageDebutJeu();
 		while (jack.getCaseActuelle() != plateau.getNbCaseMax() && bill.getCaseActuelle() != plateau.getNbCaseMax()) {
-			affichage.affichageAQuiDeJouer(bill);
-			affichage.affichageDes(bill, bill.deplacement());
-			affichage.affichageCase(bill, bill.getCaseActuelle());
+			affichage.affichageAQuiDeJouer(bill.getNom());
+			affichage.affichageDes(bill.getNom(), bill.deplacement());
+			affichage.affichageCase(bill.getNom(), bill.getCaseActuelle());
 			if (bill.getCaseActuelle() != plateau.getNbCaseMax()) {
-				affichage.affichageAQuiDeJouer(jack);
-				affichage.affichageDes(jack, jack.deplacement());
-				affichage.affichageCase(jack, jack.getCaseActuelle());
+				affichage.affichageAQuiDeJouer(jack.getNom());
+				affichage.affichageDes(jack.getNom(), jack.deplacement());
+				affichage.affichageCase(jack.getNom(), jack.getCaseActuelle());
 			}
 
 		}
 		if (bill.getCaseActuelle() == plateau.getNbCaseMax()) {
-			affichage.affichageGagnant(bill);
+			affichage.affichageGagnant(bill.getNom());
 		} else {
-			affichage.affichageGagnant(jack);
+			affichage.affichageGagnant(jack.getNom());
 		}
 		affichage.affichageFinJeu();
 

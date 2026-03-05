@@ -2,13 +2,15 @@ package jeu;
 
 public class CaseFilet extends CasesSpeciales {
 
-	public CaseFilet(int numeroCase) {
-		super(numeroCase);
+	public CaseFilet(int numeroCase, Armes arme) {
+		super(numeroCase, arme);
+		
 	}
 	
 	@Override
-	public int effet(int caseActuelle, Pirate pirateSurCase, Pirate autrePirate, Armes arme) {
-		return caseActuelle;
+	public void effet(Pirate pirateSurCase, Pirate autrePirate, Armes arme) {
+		autrePirate.deplacement();
+		
 	}
 	
 	
