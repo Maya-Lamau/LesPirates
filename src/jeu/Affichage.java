@@ -8,5 +8,7 @@ public interface Affichage {
 	public void affichageGagnant(String pirate);
 	public void affichageFinJeu();
 	public void affichageAQuiDeJouer(String pirate);
+	public void affichageCaseSpeciale(String pirate);
+	public void affichageCaseNormale(String pirate);
 	
 }

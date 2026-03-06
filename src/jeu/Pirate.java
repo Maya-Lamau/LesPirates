@@ -5,12 +5,15 @@ public class Pirate {
 	private int vie = 5;
 	private Couleur couleur;
 	private int caseActuelle;
+	private boolean presenceFilet;
 
-	public Pirate(String nom, Couleur couleur, int caseActuelle, int vie) {
+	public Pirate(String nom, Couleur couleur, int caseActuelle, int vie, boolean presenceFilet) {
 		this.nom = nom;
 		this.couleur = couleur;
 		this.vie = vie;
 		this.caseActuelle = caseActuelle;
+		this.presenceFilet = presenceFilet;
+		
 	}
 
 	public int deplacement() {
@@ -34,9 +37,25 @@ public class Pirate {
 			vie = vie - 1;
 		}
 	}
+	
+	public void dansFilet() {
+		presenceFilet = true;
+	}
+	
+	public void plusDansFilet() {
+		presenceFilet = false;
+	}
+	
+	public boolean getPresenceFilet() {
+		return presenceFilet;
+	}
 
 	public String getNom() {
 		return nom;
+	}
+	
+	public int getVie() {
+		return vie;
 	}
 
 }

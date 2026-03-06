@@ -22,4 +22,12 @@ public class JournalJackEtBill implements Affichage{
 		System.out.println(pirate + " : " + "C'est à mon tour de jouer !");
 	}
 	
+	public void affichageCaseSpeciale(String pirate) {
+		System.out.println(pirate + " : " + "Mille sabords ! Je suis sur une case speciale !");
+	}
+	
+	public void affichageCaseNormale(String pirate) {
+		System.out.println(pirate + " : " + "Par un coup de chance, je suis sur une case normale !");
+	}
+	
 }

@@ -46,6 +46,31 @@ public class Plateau {
 		return indiceTableau;
 	}
 	
+	
+	public boolean estSurCaseSpeciale(int caseActuelle) {
+		boolean caseSpecialeOK = false;
+		for(int j = 0; j<nbCasesSpeciales; j++) {
+			if(caseActuelle == lesCasesSpeciales[j].getNumeroCase()) {
+				caseSpecialeOK = true;
+			}
+		}
+		return caseSpecialeOK;
+	}
+	
+	public Armes armeDeLaCase(int indiceCase) {
+		Armes armeCase;
+		armeCase = lesCasesSpeciales[indiceCase].getArme();
+		return armeCase;
+	}
+	
+	public boolean presenceCaseFilet(int indiceCase, Armes arme) {
+		boolean caseFiletOK = false;
+		if (lesCasesSpeciales[indiceCase].getArme() == Armes.FILET) {
+			caseFiletOK = true;
+		}
+		return caseFiletOK;
+	}
+	
 	public void actionCase(int indiceCase, Pirate pirateSurCase, Pirate autrePirate, Armes arme) {
 		if (lesCasesSpeciales[indiceCase].getArme() == Armes.FILET) {
 			
