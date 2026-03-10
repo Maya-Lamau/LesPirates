@@ -10,7 +10,6 @@ public class CaseFilet extends CasesSpeciales {
 	@Override
 	public void effet(Pirate pirateSurCase, Pirate autrePirate, Armes arme) {
 		pirateSurCase.dansFilet();
-		System.out.println("LE TEST : ON EST DANS FILET");
 	}
 	
 	

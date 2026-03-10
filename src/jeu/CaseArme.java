@@ -9,7 +9,6 @@ public class CaseArme extends CasesSpeciales {
 	@Override
 	public void effet(Pirate pirateSurCase, Pirate autrePirate, Armes arme) {
 		autrePirate.perdreVie(arme);
-		System.out.println("LE TEST : ON EST DANS ARME");
 
 	}
 	

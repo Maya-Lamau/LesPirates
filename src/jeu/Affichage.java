@@ -10,5 +10,9 @@ public interface Affichage {
 	public void affichageAQuiDeJouer(String pirate);
 	public void affichageCaseSpeciale(String pirate);
 	public void affichageCaseNormale(String pirate);
+	public void affichagePresenceFilet(String pirate);
+	public void affichageVie(String pirate, int vie);
+	public void affichageCaseFilet(String pirate);
+	public void affichageCaseArme(String pirate);
 	
 }

@@ -5,7 +5,7 @@ public class Pirate {
 	private int vie = 5;
 	private Couleur couleur;
 	private int caseActuelle;
-	private boolean presenceFilet;
+	private boolean presenceFilet = false;
 
 	public Pirate(String nom, Couleur couleur, int caseActuelle, int vie, boolean presenceFilet) {
 		this.nom = nom;
@@ -55,7 +55,12 @@ public class Pirate {
 	}
 	
 	public int getVie() {
-		return vie;
+		if(vie < 0) {
+			return 0;
+		}else {
+			return vie;
+		}
+		
 	}
 
 }
