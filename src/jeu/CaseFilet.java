@@ -8,8 +8,9 @@ public class CaseFilet extends CasesSpeciales {
 	}
 	
 	@Override
-	public void effet(Pirate pirateSurCase, Pirate autrePirate, Armes arme) {
-		pirateSurCase.dansFilet();
+	public void effet(Pirate pirateSurCase, Pirate autrePirate, Armes arme, Affichage affichage) {
+		pirateSurCase.estDansFilet();
+		affichage.affichageCaseFilet(pirateSurCase.getNom());
 	}
 	
 	

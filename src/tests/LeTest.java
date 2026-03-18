@@ -7,7 +7,7 @@ public class LeTest {
 		
 		Affichage journal = new JournalJackEtBill();
 		Jeu jeu = new Jeu(journal);
-		jeu.leJeu();
+		jeu.demarrerJeu();
 	}
 	
 }

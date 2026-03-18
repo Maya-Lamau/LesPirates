@@ -1,13 +1,11 @@
 package jeu;
 
 public class Plateau {
-	private CasesSpeciales[] lesCasesSpeciales;
-	
 	private int nbCasesMax = 30;
 	private int nbCasesSpeciales = 12;
+	private CasesSpeciales[] lesCasesSpeciales = new CasesSpeciales[nbCasesSpeciales];
 
 	public Plateau() {
-		lesCasesSpeciales = new CasesSpeciales[nbCasesSpeciales];
 		CaseArme caseArme1 = new CaseArme(2, Armes.FUSIL);
 		CaseFilet caseFilet1 = new CaseFilet(4, Armes.FILET);
 		CaseArme caseArme2 = new CaseArme(5, Armes.EPEE);
@@ -71,13 +69,13 @@ public class Plateau {
 		return caseFiletOK;
 	}
 	
-	public void actionCase(int indiceCase, Pirate pirateSurCase, Pirate autrePirate, Armes arme) {
+	public void actionCase(int indiceCase, Pirate pirateSurCase, Pirate autrePirate, Armes arme,Affichage affichage) {
 		if (lesCasesSpeciales[indiceCase].getArme() == Armes.FILET) {
 			
-			lesCasesSpeciales[indiceCase].effet(pirateSurCase, autrePirate, arme);
+			lesCasesSpeciales[indiceCase].effet(pirateSurCase, autrePirate, arme,affichage);
 
 		}else {
-			 lesCasesSpeciales[indiceCase].effet(pirateSurCase, autrePirate, arme);
+			 lesCasesSpeciales[indiceCase].effet(pirateSurCase, autrePirate, arme, affichage);
 		}
 	}
 	

@@ -15,6 +15,10 @@ public class Pirate {
 		this.presenceFilet = presenceFilet;
 		
 	}
+	
+	public Couleur getCouleur() {
+		return couleur;
+	}
 
 	public int deplacement() {
 		Plateau plateau = new Plateau();
@@ -38,11 +42,11 @@ public class Pirate {
 		}
 	}
 	
-	public void dansFilet() {
+	public void estDansFilet() {
 		presenceFilet = true;
 	}
 	
-	public void plusDansFilet() {
+	public void estPlusDansFilet() {
 		presenceFilet = false;
 	}
 	
@@ -60,7 +64,7 @@ public class Pirate {
 		}else {
 			return vie;
 		}
-		
+		 
 	}
 
 }

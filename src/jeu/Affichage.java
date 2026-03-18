@@ -14,5 +14,6 @@ public interface Affichage {
 	public void affichageVie(String pirate, int vie);
 	public void affichageCaseFilet(String pirate);
 	public void affichageCaseArme(String pirate);
+	public void affichageEnter();
 	
 }

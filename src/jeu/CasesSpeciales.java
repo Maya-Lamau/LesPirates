@@ -15,11 +15,15 @@ public abstract class CasesSpeciales {
 		return numeroCase;
 	}
 	
+	public String getTypeCase() {
+		return typeCase;
+	}
+	
 	public Armes getArme() {
 		return arme;
 	}
 	
-	public abstract void effet(Pirate pirateSurCase, Pirate autrePirate, Armes arme);
+	public abstract void effet(Pirate pirateSurCase, Pirate autrePirate, Armes arme, Affichage affichage);
 	
 
 }
